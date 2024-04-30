@@ -1,0 +1,39 @@
+.field {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .field input[type="text"],
+  .field input[type="password"],
+  .field input[type="email"] {
+    width: 100%;
+    padding: 18px 10px 10px 10px; /* Increase top padding */
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    display: block;
+    box-sizing: border-box;
+    transition: border-color 0.3s; /* Smooth border color transition */
+  }
+  
+  .field label {
+    position: absolute;
+    left: 10px;
+    top: 18px; /* Starts from within the input */
+    transition: all 0.3s ease; /* Smooth transition for movement and scaling */
+    pointer-events: none;
+    color: #999;
+    background-color: transparent; /* Ensure no background blocks input text */
+  }
+  
+  .field input:focus + label,
+  .field input:not(:placeholder-shown) + label {
+    top: -5px; /* Adjust as necessary */
+    font-size: 12px; /* Smaller font size when floated */
+    color: #666;
+  }
+  
+  .field input::placeholder {
+    color: transparent; /* Hide placeholder when label is inside */
+  }
+  
