@@ -1,0 +1,41 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff; /* Light background for the navbar */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.navbar-logo img {
+    height: 50px; 
+}
+
+.navbar-links {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+}
+
+.btn {
+    padding: 8px 16px;
+    background-color: #f3f3f3;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e2e2e2; /* Lighter grey on hover */
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .btn {
+        width: 100%; /* Full width buttons on small screens */
+    }
+}
