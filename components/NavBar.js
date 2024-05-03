@@ -1,16 +1,17 @@
 import React from 'react';
 import './NavBar.css'; 
 import { Link } from 'react-router-dom';
-const Navbar = () => {
+
+const Navbar = ({ isLoggedIn }) => {
     return (
         <nav className="navbar">
             <div className="navbar-logo">
-                <Link to="/"><img src="/logo.jpg" alt="Logo" /></Link>
+                <img src="/logo.png" alt="Logo" />
             </div>
             <div className="navbar-links">
-                <Link to="/quiz" className="btn">Quizzes</Link>
-                <Link to="/signup" className="btn">Sign Up</Link>
-                <Link to="/login" className="btn">Log In</Link>
+                {isLoggedIn && <Link to="/quiz" className="btn">Quizzes</Link>}
+                {!isLoggedIn && <Link to="/signup" className="btn">Sign Up</Link>}
+                {!isLoggedIn && <Link to="/login" className="btn">Log In</Link>}
             </div>
         </nav>
     );
