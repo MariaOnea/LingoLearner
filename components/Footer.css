@@ -1,0 +1,26 @@
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .divider{
+    width:10px;
+    height:auto;
+    display:inline-block;
+}
+
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 10px;
+  }
+
+  .social-icon {
+    width: 30px; /* Smaller icons on smaller screens */
+  }
+}

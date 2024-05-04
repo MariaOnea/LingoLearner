@@ -3,8 +3,10 @@ import './SignUp.css'
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import { auth, db } from '../firebaseConfig';
+import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [fullName, setFullName] = useState('');
@@ -44,6 +46,7 @@ const SignUp = () => {
       });
 
       setSuccess("You have signed up successfully!");
+      navigate('/');
     } catch (error) {
       setError(`Error signing up: ${error.message}`);
       setSuccess('');
@@ -92,7 +95,7 @@ const SignUp = () => {
       />
        <label for="password">Password</label>
       </div>
-      <button onClick={handleSignUp}>Sign Up</button>
+      <button className="buton" onClick={handleSignUp}>Sign Up</button>
     </div>
     
   );

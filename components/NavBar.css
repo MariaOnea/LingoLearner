@@ -8,14 +8,33 @@
 }
 
 .navbar-logo img {
-    height: 50px; 
+    width: auto;  /* Adjust width as necessary */
+    height: 70px;  /* Adjust height as necessary */
+    display: block;
 }
 
-.navbar-links {
-    display: flex;
-    gap: 10px; /* Space between buttons */
+.navbar-logo a {
+    display: inline-block;  /* Ensures the link behaves like an image */
+    text-decoration: none; 
 }
 
+.navbar-links .btn {
+    color: black;         /* Sets the text color to black */
+    text-decoration: none; /* Removes underline from links */
+    font-size: 16px;      /* Sets a specific font size */
+    padding: 10px;        /* Adds padding around the links for better clickability */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navbar-links .btn:hover {
+    color: gray; /* Lightens the color on hover */
+}
+
+.divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
+}
 .btn {
     padding: 8px 16px;
     background-color: #f3f3f3;

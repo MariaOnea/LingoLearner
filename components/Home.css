@@ -1,0 +1,57 @@
+.Home{
+    font-family: 'AlegreyaSC';
+}
+.full-screen-background {
+    width: 100vw;
+    height: 100vh;
+    background: url('./scroll.png') no-repeat center center/cover; /* Ensure correct path */
+    display: flex;
+    align-items: flex-end; /* Align children (button) to the bottom */
+    justify-content: center; /* Center horizontally */
+    position: relative; /* Ensures positioning context */
+    padding-bottom: 50px; /* Padding at the bottom to avoid edge */
+  }
+
+  .full-screen-background:before {
+    content: ""; /* Required for pseudo-elements to display */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the container */
+    height: 3px; /* Height of the line */
+    background-color: #CB1106; /* Color of the line, change as needed */
+    z-index: 10; /* Ensures it is above the background image but below other content */
+  }
+  
+  .scroll-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: 'AlegreyaSC';
+    font-weight: bolder;
+    color: white;
+    background-color: #cb1106; 
+    border-style:dotted;
+    border-color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items vertically within the button */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for hover */
+  }
+  
+  .button-icon {
+    width: 30px; /* Adjust icon size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 8px; /* Space between text and icon */
+  }
+  
+  .scroll-button:hover {
+    color: #ccc; /* Lighten color on hover */
+    transform: translateY(-3px); /* Slight lift effect on hover */
+  }
+  
+  .content-section {
+    padding: 20px;
+    background-color: #f0f0f0;
+  }

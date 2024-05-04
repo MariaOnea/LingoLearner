@@ -7,7 +7,6 @@ import Home from './components/Home';
 import Login from './components/LogIn';
 import Quiz from './components/Quiz';
 import NavBar from './components/NavBar';
-
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -31,6 +30,7 @@ function App() {
         {isLoggedIn ? <Route path="/quiz" element={<Quiz />} /> : <Route path="/quiz" element={<Navigate to="/login" />} />}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
+
     </Router>
   );
 }

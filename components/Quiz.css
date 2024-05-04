@@ -1,0 +1,112 @@
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.quiz-title {
+    font-size: 24px;
+    color: #333;
+}
+
+.quiz-prompt {
+    font-size: 18px;
+    margin: 20px 0;
+    color: #666;
+}
+
+.media-container {
+    position: relative;
+    max-width: 800px; /* Set a max width for the media container */
+    width: 100%; /* Full width but not exceeding 800px */
+    height: auto; /* Height auto for natural aspect ratio */
+    margin: 20px auto; /* Center the container */
+    overflow: hidden; /* Hide anything outside this container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.input-container {
+    width: 100%;  /* Full width */
+    margin-top: 20px; /* Space between media and input */
+}
+
+.answer-input {
+    width: 80%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.submit-btn, .next-btn {
+    padding: 10px 20px;
+    color: #fff;
+    background:linear-gradient(to right, #db634f 0%, #d1361d 50%, #cc2004 100%);;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover, .next-btn:hover {
+    background: #a80e0e;
+}
+
+.next-btn {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.media-container img, 
+.media-container video {
+    width: 100%;  /* Full width of the container */
+    height: auto;  /* Height auto to maintain aspect ratio */
+    object-fit: contain; /* Ensures content fits without being cropped */
+}
+
+.media-container video {
+    max-height: 450px; /* Limit the height of videos to prevent very tall videos */
+}
+
+.media-container audio {
+    width: 100%; /* Full width for audio controls */
+}
+
+.results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.result-card {
+    background: #FFFFFF;
+    padding: 20px;
+    margin: 10px 0;
+    width: 90%; /* Adjust width based on your design preference */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    border: 1px solid #ccc; /* Optional: adds a subtle border */
+}
+
+.result-card h3, .result-card p {
+    margin: 5px 0;
+}
+
+
+
+@media (max-width: 600px) {
+    .media-container {
+        max-width: 100%; /* Allow full width on smaller screens */
+    }
+    .media-container video {
+        max-height: 300px; /* Smaller max-height for smaller screens */
+    }
+
+}
