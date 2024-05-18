@@ -13,18 +13,18 @@ const Home = () => {
     <div className="Home">
       <div className="full-screen-background" onClick={scrollToContent}>
         <button className="scroll-button">
-          Learn More
+          Află mai multe
           <img src={arrowIcon} alt="Arrow" className="button-icon" />
         </button>
       </div>
       <div id="content" className="content-section">
-        <h2>Discover More About LingoLearner!</h2>
-        <p>Welcome to LingoLearner, where your journey to master a new language begins. With our innovative approach, we empower learners of all levels to dive into new cultures and communicate with confidence. Discover a world of languages at your fingertips—inspiration, proficiency, and fun await!</p>
-        <h2>Explore Key Features of LingoLearner</h2>
+        <h2>Descoperă mai multe despre LingoLearner!</h2>
+        <p>Bine ai venit pe LingoLearner, unde călătoria ta de a stăpâni o nouă limbă străină începe! Prin abordarea noastră inovatoare, îți oferim șansa de a explora culturi noi și de a comunica cu încredere. Descoperă o mulțime de oportunități la îndemână—inspirația, competența și distracția te așteaptă! </p>
+        <h2>Explorează caracteristicile cheie ale lui LingoLearner</h2>
         <ul>
-          <li><strong>Dynamic Quizzes:</strong> Test your skills with our versatile quizzes featuring three unique question types—write what you hear from a recording, describe what you see in an image, and transcribe what you watch in a video. After completing a quiz, receive your score to track your progress and identify areas for improvement.</li>
-          <li><strong>Multimedia Resources:</strong> Learn with a mix of media – videos, images and recordings – that make learning dynamic and keep you engaged. Each resource is crafted to help you master language skills effectively while having fun.</li>
-          <li><strong>Customizable User Profiles:</strong> Enhance your learning experience by personalizing your profile. Add a nickname, choose a profile picture, select your favorite language, and write a personal description to make your learning journey uniquely yours.</li>
+          <li><strong>Teste dinamice:</strong> Testează-ți abilitățile cu ajutorul testelor noastre versatile ce dispun de trei tipuri unice de întrebări—scrie ceea ce auzi dintr-o înregistrare, descrie ceea ce vedzi într-o imagine și transcrie ceea ce vizionezi într-un videoclip. După finalizarea testului, primești scorul pentru a urmări progresul și pentru a identifica zonele de îmbunătățire.</li>
+          <li><strong>Resurse Multimedia:</strong> Învață cu un amestec de multimedia - videoclipuri, imagini și înregistrări – ce fac învățatul dinamic și te mențin în priză. Fiecare resursă este concepută pentru a te ajuta să îți stăpânești abilitățile lingvistice în mod eficient în timp ce te distrezi.</li>
+          
         </ul>
       </div>
       <Footer />

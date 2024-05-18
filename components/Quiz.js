@@ -85,15 +85,15 @@ function Quiz() {
         let result = detailedResults[currentQuestionIndex] || { score: 10, question: currentQuestion.text, correctAnswer: correctText.join(', ') };
         
         if (correctText.includes(answer)) {
-            setFeedback("Correct!");
+            setFeedback("Corect!");
             setIsAnswerCorrect(true);
             result.isCorrect = true;
         } else if (almostCorrectText.includes(answer)) {
-            setFeedback("You're close! Try again.");
+            setFeedback("Ești aproape! Mai încearcă.");
             result.score = Math.max(result.score - 0.1, 0);
             setIsAnswerCorrect(false);
         } else {
-            setFeedback("Wrong! Try again.");
+            setFeedback("Greșit! Mai încearcă.");
             result.score = Math.max(result.score - 0.5, 0);
             setIsAnswerCorrect(false);
         }
@@ -107,7 +107,7 @@ function Quiz() {
     function handleNextQuestion() {
         if (isAnswerCorrect) {
             if (currentQuestionIndex === quiz.questions.length - 1) {
-                setFeedback("Let's see your score!");
+                setFeedback("Să vedem scorul!");
                 setTimeout(() => {
                     setShowResults(true);  // Transition to results view
                 }, 1500);  // Delay for user to read the message
@@ -126,13 +126,13 @@ function Quiz() {
                 {mediaType === 'video' && (
                     <video controls>
                         <source src={media} type="video/mp4"/>
-                        Your browser does not support the video tag.
+                        Browser-ul tău nu suportă tag-ul video.
                     </video>
                 )}
                 {mediaType === 'audio' && (
                     <audio controls>
                         <source src={media} type="audio/mpeg"/>
-                        Your browser does not support the audio element.
+                        Browser-ul tău nu suportă tag-ul audio.
                     </audio>
                 )}
             </div>
@@ -147,45 +147,45 @@ function Quiz() {
         return (
             <div>
                 
-                <h1>Quiz Results</h1>
+                <h1>Rezultatele testului</h1>
                 {detailedResults.map((result, index) => (
                     <div key={index} className="result-card">
-                        <h3>Question {index + 1}: {result.question}</h3>
-                        <p>Your answer: {result.yourAnswer}</p>
-                        <p>Correct answer: {result.correctAnswer}</p>
-                        <p>Score for this question: {result.score.toFixed(2)}</p>
+                        <h3>Întrebarea {index + 1}: {result.question}</h3>
+                        <p>Răspunsul tău: {result.yourAnswer}</p>
+                        <p>Răspunsul corect: {result.correctAnswer}</p>
+                        <p>Scorul pe această întrebare: {result.score.toFixed(2)}</p>
                     </div>
                 ))}
-                <h2>Total Score: {totalScore.toFixed(2)}</h2>
+                <h2>Scorul total: {totalScore.toFixed(2)}</h2>
             </div>
         
         );
     };
     
 
-    if (!quiz) return <div>Loading quiz...</div>;
+    if (!quiz) return <div>Se încarcă testul...</div>;
     if (showResults) return renderResults();  // Check if results should be displayed
 
     const currentQuestion = quiz.questions[currentQuestionIndex];
 
     return (
         <div className="quiz-container">
-    <h1 className="quiz-title">Quiz</h1>
+    <h1 className="quiz-title">Test</h1>
     <p className="quiz-prompt">{quiz ? quiz.questions[currentQuestionIndex].text : "Loading question..."}</p>
     <div className="media-container">
         {renderMedia()}
     </div>
     <div className="input-container">
-        <input type="text" className="answer-input" value={userAnswers[currentQuestionIndex] || ''} onChange={handleAnswerChange} placeholder="Type your answer here" />
-        <button className="submit-btn" onClick={handleSubmitAnswer}>Submit</button>
+        <input type="text" className="answer-input" value={userAnswers[currentQuestionIndex] || ''} onChange={handleAnswerChange} placeholder="Scrie răspunsul aici" />
+        <button className="submit-btn" onClick={handleSubmitAnswer}>Trimite</button>
 
         
     </div>
     {/* Display feedback near next button */}
     <p className="feedback-text">{feedback}</p>
     {currentQuestionIndex < quiz.questions.length - 1 ? 
-        <button className="next-btn" onClick={handleNextQuestion} disabled={!isAnswerCorrect}>Next</button> :
-        <button className="next-btn" onClick={handleNextQuestion} disabled={!isAnswerCorrect}>Finish</button>
+        <button className="next-btn" onClick={handleNextQuestion} disabled={!isAnswerCorrect}>Următorul</button> :
+        <button className="next-btn" onClick={handleNextQuestion} disabled={!isAnswerCorrect}>Termină</button>
     }
 </div>
     );

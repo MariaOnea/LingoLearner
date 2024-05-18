@@ -19,7 +19,7 @@ const Navbar = ({ isLoggedIn }) => {
             <div className="navbar-links">
                 {isLoggedIn && (
                     <>
-                        <Link to="/quiz" className="btn">Quizzes</Link>
+                        <Link to="/quiz" className="btn">Teste</Link>
                         <div className='divider'/>
                         <button onClick={handleLogout} className="btn">Log Out</button>
                     </>
